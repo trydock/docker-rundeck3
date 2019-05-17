@@ -6,7 +6,7 @@ RUN mkdir -p /usr/share/man/man1/
 RUN apt-get -qq update && apt-get install --no-install-recommends -qqy curl net-tools procps netcat git gosu openjdk-8-jre-headless openssh-client uuid-runtime && rm -rf /var/lib/apt/lists/*
 
 ENV TINI_VERSION 0.18.0
-ENV TINI_SHA 12d20136605531b09a2c2dac02ccee85e1b874eb322ef6baf7561cd93f93c855
+ENV TINI_SHA eadb9d6e2dc960655481d78a92d2c8bc021861045987ccd3e27c7eae5af0cf33
 
 RUN curl -fsSL https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini-static-amd64 -o /bin/tini && chmod +x /bin/tini && echo "$TINI_SHA  /bin/tini" | sha256sum -c -
 
