@@ -3,7 +3,7 @@ FROM debian:stable-slim
 MAINTAINER debuggerboy <debuggerboy@gmail.com>
 
 RUN mkdir -p /usr/share/man/man1/
-RUN apt-get -qq update && apt-get install --no-install-recommends -qqy curl net-tools procps netcat git gosu openjdk-8-jre-headless openssh-client uuid-runtime && rm -rf /var/lib/apt/lists/*
+RUN apt-get -qq update && apt-get install --no-install-recommends -qqy curl net-tools vim-tiny procps netcat git gosu openjdk-8-jre-headless openssh-client uuid-runtime && rm -rf /var/lib/apt/lists/*
 
 ENV TINI_VERSION 0.18.0
 ENV TINI_SHA eadb9d6e2dc960655481d78a92d2c8bc021861045987ccd3e27c7eae5af0cf33
