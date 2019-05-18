@@ -10,7 +10,7 @@ ENV TINI_SHA eadb9d6e2dc960655481d78a92d2c8bc021861045987ccd3e27c7eae5af0cf33
 
 RUN curl -fsSL https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini-static-amd64 -o /bin/tini && chmod +x /bin/tini && echo "$TINI_SHA  /bin/tini" | sha256sum -c -
 
-ENV RUNDECK_HOME /home/rundeck
+ENV RUNDECK_HOME /var/lib/rundeck
 ENV RUNDECK_UID 1000
 ENV RUNDECK_GID 1000
 
